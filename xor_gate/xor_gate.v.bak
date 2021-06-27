@@ -1,0 +1,9 @@
+module xor_gate(at,af,bt,bf,zt,zf);
+
+input at,af,bt,bf;
+output zt,zf;
+
+
+assign zt= (at & subf) + (af & subt) + zt & (at+af+subt+subf);
+
+endmodule 
