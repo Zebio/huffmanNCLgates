@@ -9,13 +9,13 @@ Quartus sim root      :  d:/programas/quartus/quartus/eda/sim_lib
 Simulation Tool       :  modelsim-altera
 Simulation Language   :  verilog
 Simulation Mode       :  GUI
-Sim Output File       :  estagio_ula.vo
-Sim SDF file          :  estagio_ula__verilog.sdo
+Sim Output File       :  estagio_ula_1000.vo
+Sim SDF file          :  estagio_ula_1000__verilog.sdo
 Sim dir               :  simulation\modelsim
 
 =======================================================
 
 Info: Starting NativeLink simulation with ModelSim-Altera software
 Sourced NativeLink script d:/programas/quartus/quartus/common/tcl/internal/nativelink/modelsim.tcl
-Warning: File estagio_ula_run_msim_gate_verilog.do already exists - backing up current file as estagio_ula_run_msim_gate_verilog.do.bak2
+Warning: File estagio_ula_1000_run_msim_gate_verilog.do already exists - backing up current file as estagio_ula_1000_run_msim_gate_verilog.do.bak
 Info: Spawning ModelSim-Altera Simulation software 

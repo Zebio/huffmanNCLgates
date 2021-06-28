@@ -1,7 +1,7 @@
 `timescale 1 s/100 ms;  // time-unit = 1 ns, precision = 10 ps
 
 
-module estagio_ula_tb();
+module estagio_ula_1000_tb();
 
 reg  [7:0] a,b;
 reg  [1:0] opr;
@@ -16,7 +16,7 @@ reg [8:0]i;
 // duration for each bit = 20 * timescale = 20 * 1 ns  = 20ns
 localparam period = 1; 
 
-estagio_ula dut(ack_out);
+estagio_ula_1000 dut(ack_in);
 
 initial 
 begin

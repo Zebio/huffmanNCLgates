@@ -1,10 +1,10 @@
-module estagio_ula(ack_out);
+module estagio_ula(ack_in);
 
-wire ack_in;
+input ack_in;
 wire [7:0]a,b;
 wire [1:0]opr;
 
-output ack_out;
+wire ack_out;
 wire[7:0]soma;
 wire[1:0]of,zero,neg;
 

@@ -16,7 +16,7 @@ reg [8:0]i;
 // duration for each bit = 20 * timescale = 20 * 1 ns  = 20ns
 localparam period = 1; 
 
-estagio_ula dut(ack_out);
+estagio_ula dut(ack_in);
 
 initial 
 begin
