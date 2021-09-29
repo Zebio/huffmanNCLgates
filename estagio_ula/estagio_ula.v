@@ -1,12 +1,12 @@
-module estagio_ula(ack_in);
+module estagio_ula(ack_in,a,b,opr,ack_out,soma,of,zero,neg);
 
 input ack_in;
-wire [7:0]a,b;
-wire [1:0]opr;
+input [7:0]a,b;
+input [1:0]opr;
 
-wire ack_out;
-wire[7:0]soma;
-wire[1:0]of,zero,neg;
+output ack_out;
+output[7:0]soma;
+output[1:0]of,zero,neg;
 
 wire [7:0]Wsoma;
 wire [1:0]Wof,Wzero,Wneg;
@@ -22,10 +22,7 @@ not (muller_post,ack_in);
 
 muller_2input muller(det,muller_post,ctrl);
 
-reg_ass bit0(Wsoma[1],Wsoma[0],ctrl,soma[1],soma[0]);
-reg_ass bit1(Wsoma[3],Wsoma[2],ctrl,soma[3],soma[2]);
-reg_ass bit2(Wsoma[5],Wsoma[4],ctrl,soma[5],soma[4]);
-reg_ass bit3(Wsoma[7],Wsoma[6],ctrl,soma[7],soma[6]);
+reg_ass_4bits s(Wsoma,ctrl,soma);
 
 reg_ass z(Wzero[1],Wzero[0],ctrl,zero[1],zero[0]);
 reg_ass n(Wneg[1] ,Wneg[0] ,ctrl,neg[1] ,neg[0]);

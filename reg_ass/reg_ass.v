@@ -4,14 +4,14 @@ input et,ef,hab;
 
 output st,sf;
 
-wire w1,w2,nothab;
+wire or_true,or_false;
 
-not (nothab,hab);
+or (or_true,st,et);
+and (st,hab,or_true);
 
-nor (w1,st,nothab,et);
-nor (st,w1,nothab);
+or(or_false,sf,ef);
+and(sf,hab,or_false);
 
-nor (w2,sf,nothab,ef);
-nor (sf,w2,nothab);
+
 
 endmodule

@@ -51,16 +51,6 @@ set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name VERILOG_FILE ../reg_ass/reg_ass.v
-set_global_assignment -name VERILOG_FILE ../muller_2input/muller_2input.v
-set_global_assignment -name VERILOG_FILE ../zero_detector/zero_detector.v
-set_global_assignment -name VERILOG_FILE ../xor_gate/xor_gate.v
-set_global_assignment -name VERILOG_FILE ../somador_4bits/somador_4bits.v
-set_global_assignment -name VERILOG_FILE ../overflow_detector/overflow_detector.v
-set_global_assignment -name VERILOG_FILE "../full adder/full_adder.v"
-set_global_assignment -name VERILOG_FILE ../compl_2/compl_2.v
-set_global_assignment -name VERILOG_FILE ../ula_4bits/ula_4bits.v
-set_global_assignment -name VERILOG_FILE estagio_ula.v
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
@@ -78,10 +68,21 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_s
 set_global_assignment -name EDA_TEST_BENCH_FILE estagio_ula_tb.v -section_id estagio_ula_tb
 set_global_assignment -name POWER_USE_INPUT_FILES ON
 set_global_assignment -name POWER_DEFAULT_TOGGLE_RATE 12.5%
-set_global_assignment -name POWER_DEFAULT_INPUT_IO_TOGGLE_RATE 0%
+set_global_assignment -name POWER_DEFAULT_INPUT_IO_TOGGLE_RATE 12.5%
 set_global_assignment -name POWER_USE_PVA OFF
 set_global_assignment -name POWER_REPORT_SIGNAL_ACTIVITY ON
 set_global_assignment -name POWER_REPORT_POWER_DISSIPATION ON
 set_global_assignment -name POWER_INPUT_FILE_NAME simulation/modelsim/estagio_ula.vcd -section_id estagio_ula.vcd
 set_instance_assignment -name POWER_READ_INPUT_FILE estagio_ula.vcd -to estagio_ula
+set_global_assignment -name VERILOG_FILE ../reg_ass_4bits/reg_ass_4bits.v
+set_global_assignment -name VERILOG_FILE ../reg_ass/reg_ass.v
+set_global_assignment -name VERILOG_FILE ../muller_2input/muller_2input.v
+set_global_assignment -name VERILOG_FILE ../zero_detector/zero_detector.v
+set_global_assignment -name VERILOG_FILE ../xor_gate/xor_gate.v
+set_global_assignment -name VERILOG_FILE ../somador_4bits/somador_4bits.v
+set_global_assignment -name VERILOG_FILE ../overflow_detector/overflow_detector.v
+set_global_assignment -name VERILOG_FILE "../full adder/full_adder.v"
+set_global_assignment -name VERILOG_FILE ../compl_2/compl_2.v
+set_global_assignment -name VERILOG_FILE ../ula_4bits/ula_4bits.v
+set_global_assignment -name VERILOG_FILE estagio_ula.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

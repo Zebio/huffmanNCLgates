@@ -1,0 +1,18 @@
+module estagio_latch(ack_in,dados_in,ack_out,dados_out);
+
+input 		ack_in;
+input [7:0] dados_in;
+output 		ack_out;
+output[7:0] dados_out;
+
+wire det,ctrl_signal;
+det_4bits detector(dados_in,det);
+
+muller_2input ctrl(det,~ack_in,ctrl_signal);
+
+reg_ass_4bits reg_4bits(dados_in,ctrl_signal,dados_out);
+
+ack_out<=ctrl_signal;
+
+endmodule 
+

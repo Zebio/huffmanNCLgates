@@ -1,0 +1,19 @@
+module anel_assincrono_tb();
+
+reg seletor;
+
+wire [7:0] barr_soma,barr_latch1,barr_latch2;
+
+anel_assincrono dut(seletor,barr_soma,barr_latch1,barr_latch2);
+
+initial 
+begin
+	seletor=0;
+	#10
+	seletor=1;
+	#10
+	seletor=0;
+	#100;
+
+end
+endmodule 

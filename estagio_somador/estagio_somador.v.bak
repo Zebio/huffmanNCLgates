@@ -1,0 +1,24 @@
+module estagio_somador(ack_in,a,b,cin,ack_out,soma_saida);
+
+input 		ack_in;
+input [7:0] a,b;
+input [1:0]	cin;
+output 		ack_out;
+output[7:0] resultado;
+
+
+wire det,ctrl_signal;
+wire[7:0] soma;
+
+somador_4bits(a,b,cin,soma,);
+
+
+det_4bits detector(soma,det);
+
+muller_2input ctrl(det,~ack_in,ctrl_signal);
+
+reg_ass_4bits reg_4bits(soma,ctrl_signal,soma_saida);
+
+assign ack_out=ctrl_signal;
+
+endmodule 

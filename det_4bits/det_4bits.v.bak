@@ -1,0 +1,16 @@
+module det_4bits(dados_in,det);
+
+input[7:0] dados_in;
+
+output det;
+
+wire w1,w2,w3,w4;
+
+or(w1,dados_in[7],dados_in[6]);
+or(w2,dados_in[5],dados_in[4]);
+or(w3,dados_in[3],dados_in[2]);
+or(w4,dados_in[1],dados_in[0]);
+
+and (det,w1,w2,w3,w4);
+
+endmodule 
